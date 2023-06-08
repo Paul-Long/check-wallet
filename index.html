@@ -5,11 +5,16 @@
   <title>Title</title>
 </head>
 <body>
-<div id='root'></div>
+<div style='padding-top: 50px;margin: 0 auto;width: 100%'>
+  <div id='okx' style='text-align: center'></div>
+  <div id='im' style='margin-top: 24px;text-align: center'></div>
+</div>
 <script>
   (function() {
-    var ele = document.getElementById('root');
-    ele.innerText = !window.okxwallet ? 'undefined' : 'true'
+    var ele = document.getElementById('okx');
+    ele.innerText = JSON.stringify({okxwallet: !window.okxwallet ? 'undefined' : 'true'})
+    var imEle = document.getElementById('im');
+    imEle.innerText = JSON.stringify({imToken: !window.imToken ? 'undefined' : 'true'})
   })()
 </script>
 </body>
