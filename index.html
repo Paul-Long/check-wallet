@@ -5,9 +5,11 @@
   <title>Title</title>
 </head>
 <body>
+<div id='root'></div>
 <script>
   (function() {
-    window.alert(window.okxwallet)
+    var ele = document.getElementById('root');
+    ele.innerText = !window.okxwallet ? 'undefined' : JSON.stringify(window.okxwallet)
   })()
 </script>
 </body>
